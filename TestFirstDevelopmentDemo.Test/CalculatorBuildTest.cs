@@ -13,7 +13,5 @@
         {
             cal = new CalculatorBuild();
         }
-
-
     }
 }

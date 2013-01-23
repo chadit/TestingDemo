@@ -5,8 +5,9 @@
 
     public class Program
     {
-        // private static readonly CalculatorBuild CalA = new CalculatorBuild();
+        private static readonly CalculatorBuild CalA = new CalculatorBuild();
         private static readonly CalculatorCompleted CalB = new CalculatorCompleted();
+
 
         public static void Main(string[] args)
         {
