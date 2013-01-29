@@ -1,4 +1,3 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFirstDevelopmentDemo", "TestFirstDevelopmentDemo\TestFirstDevelopmentDemo.csproj", "{53DD70C9-8C7D-4644-94E5-A3405F0491F5}"
@@ -6,18 +5,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFirstDevelopmentDemo.Test", "TestFirstDevelopmentDemo.Test\TestFirstDevelopmentDemo.Test.csproj", "{1CBAA91E-8995-45A4-B2D0-39AC5F462BD3}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 3
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://chlodny.tfspreview.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = TestFirstDevelopmentDemo\\TestFirstDevelopmentDemo.csproj
-		SccProjectName1 = TestFirstDevelopmentDemo
-		SccLocalPath1 = TestFirstDevelopmentDemo
-		SccProjectUniqueName2 = TestFirstDevelopmentDemo.Test\\TestFirstDevelopmentDemo.Test.csproj
-		SccProjectName2 = TestFirstDevelopmentDemo.Test
-		SccLocalPath2 = TestFirstDevelopmentDemo.Test
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
