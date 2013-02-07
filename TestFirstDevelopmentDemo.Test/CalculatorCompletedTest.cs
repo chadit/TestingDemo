@@ -17,7 +17,7 @@
         }
 
         [TestMethod]
-        public void CalculatorTestEmptyString()
+        public void CalculatorEmptyStringTest()
         {
             // Act
             var returnValue = cal.Calculator(string.Empty);
@@ -27,7 +27,7 @@
         }
 
         [TestMethod]
-        public void CalculatorTestTwoNumberString()
+        public void CalculatorTwoNumberStringTest()
         {
             // Act
             var returnValue = cal.Calculator("1,2");
@@ -37,7 +37,7 @@
         }
 
         [TestMethod]
-        public void CalculatorTestThreeNumberString()
+        public void CalculatorThreeNumberStringTest()
         {
             // Act
             var returnValue = cal.Calculator("1,2,3");
@@ -47,7 +47,7 @@
         }
 
         [TestMethod]
-        public void CalculatorTestNewLineDelimeter()
+        public void CalculatorNewLineDelimeterTest()
         {
             // Act
             var returnValue = cal.Calculator(@"1\n2");
@@ -57,7 +57,7 @@
         }
 
         [TestMethod]
-        public void CalculatorTestMixDelimeterShort()
+        public void CalculatorMixDelimeterShort()
         {
             // Act
             var returnValue = cal.Calculator(@"1,2\n3,4,5\n1");
