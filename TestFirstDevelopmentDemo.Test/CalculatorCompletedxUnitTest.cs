@@ -1,15 +1,9 @@
 ﻿namespace TestFirstDevelopmentDemo.Test
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using TestFirstDevelopmentDemo;
-
-    // using Xunit;
+    using Xunit;
     using Xunit.Extensions;
 
-    using Assert = Xunit.Assert;
-
-    [TestClass]
     public class CalculatorCompletedxUnitTest
     {
         // Arrange
@@ -20,8 +14,7 @@
             cal = new CalculatorCompleted();
         }
 
-        // [Fact]
-        [TestMethod]
+        [Fact]
         public void CalculatorEmptyStringTest()
         {
             // Act

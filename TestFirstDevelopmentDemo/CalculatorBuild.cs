@@ -6,7 +6,7 @@
     {
         public int Calculator(string s)
         {
-            return 0;
+            return -20;
         }
     }
 }
