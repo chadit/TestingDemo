@@ -1,4 +1,4 @@
-﻿namespace TestFirstDevelopmentDemo.Test
+﻿namespace TestFirstDevelopmentDemo.Test.Calculate_MSTEST
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -11,7 +11,10 @@
         [TestInitialize]
         public void Setup()
         {
-            cal = new CalculatorBuild();
+            this.cal = new CalculatorBuild();
         }
+
+
+
     }
 }

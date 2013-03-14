@@ -1,5 +1,7 @@
-﻿namespace TestFirstDevelopmentDemo.Test
+﻿namespace TestFirstDevelopmentDemo.Test.Calculate_MSTEST
 {
+    using System;
+
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     using TestFirstDevelopmentDemo;
@@ -13,44 +15,47 @@
         [TestInitialize]
         public void Setup()
         {
-            cal = new CalculatorCompleted();
+            this.cal = new CalculatorCompleted();
         }
 
         [TestMethod]
         public void CalculatorEmptyStringTest()
         {
             // Act
-            var returnValue = cal.Calculator(string.Empty);
+            var returnValue = this.cal.Calculator(string.Empty);
 
             // Assert
             Assert.AreEqual(0, returnValue);
         }
 
         [TestMethod]
+        [TestCategory("Calculator-Comma")]
         public void CalculatorTwoNumberStringTest()
         {
             // Act
-            var returnValue = cal.Calculator("1,2");
+            var returnValue = this.cal.Calculator("1,2");
 
             // Assert
             Assert.AreEqual(3, returnValue);
         }
 
         [TestMethod]
+        [TestCategory("Calculator-Comma")]
         public void CalculatorThreeNumberStringTest()
         {
             // Act
-            var returnValue = cal.Calculator("1,2,3");
+            var returnValue = this.cal.Calculator("1,2,3");
 
             // Assert
             Assert.AreEqual(6, returnValue);
         }
 
         [TestMethod]
+        [TestCategory("Calculator-NewLine")]
         public void CalculatorNewLineDelimeterTest()
         {
             // Act
-            var returnValue = cal.Calculator(@"1\n2");
+            var returnValue = this.cal.Calculator(@"1\n2");
 
             // Assert
             Assert.AreEqual(3, returnValue);
@@ -60,7 +65,7 @@
         public void CalculatorMixDelimeterShort()
         {
             // Act
-            var returnValue = cal.Calculator(@"1,2\n3,4,5\n1");
+            var returnValue = this.cal.Calculator(@"1,2\n3,4,5\n1");
 
             // Assert
             Assert.AreEqual(16, returnValue);
@@ -72,7 +77,7 @@
         {
             // Arrange
             var valueSent = string.Empty;
-            CalculatorTest(0, valueSent);
+            this.CalculatorTest(0, valueSent);
         }
 
         [TestMethod]
@@ -80,33 +85,19 @@
         {
             // Arrange
             var valueSent = "1,2";
-            CalculatorTest(3, valueSent);
+            this.CalculatorTest(3, valueSent);
         }
 
         [TestMethod]
         public void CalculatorTest(int originalVlaue, string passedInparm)
         {
             // Act
-            var returnValue = cal.Calculator(passedInparm);
+            var returnValue = this.cal.Calculator(passedInparm);
 
             // Assert
             Assert.AreEqual(originalVlaue, returnValue);
         }
 
-        // If we had nunit installed or microsoft pushes row support
-        /*  [TestMethod]
-          [Row(0, string.Empty)]
-          [Row(3, "1,2")]
-          [Row(6, "1,2,3")]
-          [Row(3, @"1\n2")]
-          public void CalculatorTestWithRowSupport(int originalVlaue, string passedInparm)
-          {
-              // Act
-              var returnValue = cal.Calculator(passedInparm);
 
-              // Assert
-              Assert.AreEqual(originalVlaue, returnValue);
-          }
-         */
     }
 }

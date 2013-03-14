@@ -1,6 +1,7 @@
-﻿namespace TestFirstDevelopmentDemo.Test
+﻿namespace TestFirstDevelopmentDemo.Test.Calculate_XUNIT
 {
     using TestFirstDevelopmentDemo;
+
     using Xunit;
     using Xunit.Extensions;
 
@@ -11,14 +12,15 @@
 
         public CalculatorCompletedxUnitTest()
         {
-            cal = new CalculatorCompleted();
+            this.cal = new CalculatorCompleted();
         }
 
+
         [Fact]
-        public void CalculatorEmptyStringTest()
+        public void CalculatorEmptyStringTestXunit()
         {
             // Act
-            var returnValue = cal.Calculator(string.Empty);
+            var returnValue = this.cal.Calculator(string.Empty);
 
             // Assert
             Assert.Equal(0, returnValue);
@@ -32,10 +34,11 @@
         public void CalculatorTheoryTest(int expectedReturn, string passedInValue)
         {
             // Act
-            var returnValue = cal.Calculator(passedInValue);
+            var returnValue = this.cal.Calculator(passedInValue);
 
             // Assert
             Assert.Equal(expectedReturn, returnValue);
+
         }
     }
 }
