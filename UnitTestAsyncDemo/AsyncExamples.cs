@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -17,7 +15,21 @@ namespace UnitTestAsyncDemo
                 Thread.Sleep(3000);
                 TestProperty = "Hello World";
             });
-
         }
+
+        // Example from TechEd Europe -- Peter Provost
+        // test using Shims
+        public void CheckIfEndOfWorld()
+        {
+            if (DateTime.Now == new DateTime(2000, 1, 1))
+            {
+                throw new Y2KException();
+            }
+        }
+    }
+
+    public class Y2KException : Exception
+    {
+
     }
 }
