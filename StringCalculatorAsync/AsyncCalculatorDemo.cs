@@ -10,7 +10,7 @@
 
         public Task Calculator(string s)
         {
-            return Task<string>.Run(() =>
+            return Task<int>.Run(() =>
             {
                 CalculatedValue = -20;
             });

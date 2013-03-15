@@ -10,7 +10,7 @@
 
         public Task Calculator(string s)
         {
-            return Task<string>.Run(() =>
+            return Task<int>.Run(() =>
             {
                 var num = 0;
                 if (s != string.Empty)
