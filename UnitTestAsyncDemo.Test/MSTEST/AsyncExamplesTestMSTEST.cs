@@ -33,5 +33,25 @@ namespace UnitTestAsyncDemo.Test.Mstest
                 asyncClass.CheckIfEndOfWorld();
             }
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(Y2KException))]
+        public void EndOfWorldCheckerPrivTest()
+        {
+            // scope the shim otherwise it will fail, this is so it does not last forever.
+            using (ShimsContext.Create())
+            {
+                AsyncExamples asyncEx = new AsyncExamples();
+                PrivateObject y2K = new PrivateObject(asyncEx);
+                ShimDateTime.NowGet = () => new DateTime(2000, 1, 1);
+
+                y2K.Invoke("CheckIfEndOfWorldPrivateMethod");
+
+                //var asyncClass = new AsyncExamples();
+                //ShimDateTime.NowGet = () => new DateTime(2000, 1, 1);
+                //asyncClass.CheckIfEndOfWorld();
+            }
+        }
+
     }
 }
