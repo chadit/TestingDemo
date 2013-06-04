@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCalculatorAsyncTestMs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCalculatorAsyncTestXunit", "StringCalculatorAsyncTestXunit\StringCalculatorAsyncTestXunit.csproj", "{4887A84E-05E0-40A9-A32D-C87BD0F5BB56}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{6281CF89-4428-4139-B734-3E305B5E5FC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

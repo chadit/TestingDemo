@@ -99,5 +99,39 @@
         }
 
 
+
+        #region private Test
+        [TestMethod]
+        public void CalcualtorPrivateSmallNumber_Test()
+        {
+            // Arrange
+            var valueSent = "1,2";
+            CalculatorCompleted calCom = new CalculatorCompleted();
+            PrivateObject cal1 = new PrivateObject(calCom);
+            var returned = cal1.Invoke("CalculatorPrivate", valueSent);
+            Assert.AreEqual(3, returned);
+
+
+            // this.CalculatorTest(3, valueSent);
+        }
+        #endregion
+
+        #region Protected Test
+        [TestMethod]
+        public void CalcualtorProtectedSmallNumber_Test()
+        {
+            // Arrange
+            var valueSent = "1,2";
+            CalculatorCompleted calCom = new CalculatorCompleted();
+            PrivateObject cal1 = new PrivateObject(calCom);
+            var returned = cal1.Invoke("CalculatorPrivate", valueSent);
+            Assert.AreEqual(3, returned);
+
+
+            // this.CalculatorTest(3, valueSent);
+        }
+        #endregion
+
+
     }
 }

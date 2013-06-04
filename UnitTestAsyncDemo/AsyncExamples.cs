@@ -36,6 +36,16 @@ namespace UnitTestAsyncDemo
                 throw new Y2KException();
             }
         }
+
+        // Example from TechEd Europe -- Peter Provost
+        // test using Shims
+        protected void CheckIfEndOfWorldProtectedMethod()
+        {
+            if (DateTime.Now == new DateTime(2000, 1, 1))
+            {
+                throw new Y2KException();
+            }
+        }
     }
 
     public class Y2KException : Exception

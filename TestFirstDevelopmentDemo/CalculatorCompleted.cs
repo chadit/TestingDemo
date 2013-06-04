@@ -19,5 +19,37 @@
 
             return num;
         }
+
+        private int CalculatorPrivate(string s)
+        {
+            var num = 0;
+            if (s != string.Empty)
+            {
+                var stringSprilt = s.Split(new[] { ",", "\\n" }, StringSplitOptions.None);
+                foreach (var value in stringSprilt)
+                {
+                    num += int.Parse(value);
+                    // Thread.Sleep(1000);
+                }
+            }
+
+            return num;
+        }
+
+        protected int CalculatorProtected(string s)
+        {
+            var num = 0;
+            if (s != string.Empty)
+            {
+                var stringSprilt = s.Split(new[] { ",", "\\n" }, StringSplitOptions.None);
+                foreach (var value in stringSprilt)
+                {
+                    num += int.Parse(value);
+                    // Thread.Sleep(1000);
+                }
+            }
+
+            return num;
+        }
     }
 }
